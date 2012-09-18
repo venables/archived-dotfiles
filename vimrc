@@ -13,6 +13,10 @@ set colorcolumn=120
 set gfn=Menlo\ Regular:h12
 syntax on
 
+" Don't save backups
+set nobackup
+set nowritebackup
+
 " Set encoding
 set encoding=utf-8
 
@@ -31,6 +35,10 @@ set ruler
 " Show trailing whitespace as '.'
 set listchars=tab:▸\ ,trail:·
 set list
+
+" Highlight trailing whitespace
+highlight RedundantWhitespace ctermbg=black guibg=black
+match RedundantWhitespace /\s\+$\| \+\ze\t/
 
 " Always display the status line
 set laststatus=2
