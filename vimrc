@@ -81,7 +81,7 @@ nnoremap <Leader>ev :e ~/.vimrc<CR>
 
 " Ack.vim
 " <D-F> (Command Shift F) - :Ack
-nnoremap <D-F> :Ack
+nnoremap <D-F> :Ack 
 
 " Fugitive
 " <leader>gb maps to :Gblame<CR>
