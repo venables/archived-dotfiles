@@ -9,8 +9,6 @@ colorscheme Tomorrow-Night-Eighties
 
 "
 " GUI Options
-set transparency=5
-set guioptions=aAce
 set colorcolumn=120
 set gfn=Menlo\ Regular:h12
 syntax on
@@ -121,6 +119,12 @@ nnoremap <Down> :echoe "Use j"<CR>
 " MacVim specifics
 "
 if has("gui_running")
+  " Set window transparency
+  set transparency=5
+
+  " Use minimal window options
+  set guioptions=aAce
+
   " Automatically resize splits when resizing MacVim window
   autocmd VimResized * wincmd =
 endif
