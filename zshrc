@@ -6,23 +6,24 @@ alias be='bundle exec'
 
 # Set the default editor
 export BUNDLER_EDITOR=mvim
+export EDITOR='mvim -f'
 
 # Load from /usr/local/bin before /usr/bin
 export PATH=/usr/local/bin:$PATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-# Node.js includes
-#export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
-
 # Android SDK
-export PATH=$PATH:/work/katama/android-sdk-macosx/platform-tools:/work/katama/android-sdk-macosx/tools
-#export ANDROID_HOME=/Users/mattvenables/Library/android/android-sdk-mac
+export PATH=/Android/platform-tools:/Android/tools:$PATH
 
 # For Parallel tests:
 export PARALLEL_TEST_PROCESSORS=3
 
-# Some colors:
+# rvm
+PATH=$PATH:$HOME/.rvm/bin
+[[ -s "/Users/mattvenables/.rvm/scripts/rvm" ]] && source "/Users/mattvenables/.rvm/scripts/rvm"
+
+# Colorize the terminal
 export CLICOLOR=1
 export LSCOLORS=Exfxcxdxbxegedabagacad
 export GREP_OPTIONS='--color=auto'
