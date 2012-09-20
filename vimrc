@@ -17,6 +17,9 @@ syntax on
 set nobackup
 set nowritebackup
 
+" Move swapfiles to /tmp
+set directory=/tmp
+
 " Set encoding
 set encoding=utf-8
 
