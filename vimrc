@@ -66,6 +66,12 @@ endif
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+"
+" File types
+"
+au BufRead,BufNewFile {Procfile} set ft=ruby
+
+
 
 "
 " Mappings
