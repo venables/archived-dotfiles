@@ -110,7 +110,7 @@ nnoremap <Leader>gp :Git push<CR>
 
 " NERDTree
 " Open NERDTree automatically
-autocmd vimenter * if !argc() | NERDTree | endif
+" autocmd vimenter * if !argc() | NERDTree | endif
 " Close the window if NERDTree is the only one left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Map <Leader>n to toggle nerd tree
