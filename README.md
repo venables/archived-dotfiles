@@ -10,7 +10,9 @@ $ cd ~
 $ ln -s dotfiles/vimrc .vimrc
 $ ln -s dotfiles/zshrc .zshrc
 $ ln -s dotfiles/vim .vim
+$ ln -s dotfiles/ackrc .ackrc
 
 $ cd dotfiles
 $ git submodule init
 $ git submodule update
+```
