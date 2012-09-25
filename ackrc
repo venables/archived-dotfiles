@@ -1,4 +1,5 @@
 --type-add=ruby=.haml
+--type-add=ruby=.jbuilder
 --type-add=css=.scss
 --type-add=css=.sass
 --type-add=css=.less
