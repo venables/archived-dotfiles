@@ -13,6 +13,7 @@
 --type-set=plist=.plist
 --type-set=tmstuff=.tmproj,.tm_build_errors
 --type-set=bin=.pdf
+--type-set=txt=.txt
 --nobin
 --nonib
 --notmstuff
