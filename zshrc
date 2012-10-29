@@ -11,8 +11,9 @@ export EDITOR='mvim -f'
 # Load from /usr/local/bin before /usr/bin
 export PATH=/usr/local/bin:$PATH
 
-# RVM
-PATH=$PATH:$HOME/.rvm/bin
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Android SDK
 export PATH=/Android/platform-tools:/Android/tools:$PATH
