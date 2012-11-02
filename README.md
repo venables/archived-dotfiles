@@ -11,6 +11,7 @@ $ ln -s dotfiles/vimrc .vimrc
 $ ln -s dotfiles/zshrc .zshrc
 $ ln -s dotfiles/vim .vim
 $ ln -s dotfiles/ackrc .ackrc
+$ ln -s dotfiles/powconfig .powconfig
 
 $ cd dotfiles
 $ git submodule init
