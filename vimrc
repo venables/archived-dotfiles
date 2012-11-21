@@ -137,7 +137,7 @@ nnoremap <Down> :echoe "Use j"<CR>
 "
 if has("gui_running")
   " Set window transparency
-  set transparency=5
+  " set transparency=5
 
   " Use minimal window options
   set guioptions=aAce
