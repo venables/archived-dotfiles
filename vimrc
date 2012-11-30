@@ -113,6 +113,13 @@ nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>gp :Git push<CR>
 " <leader>gp maps to :Git push<CR>
 
+nnoremap <Leader>ga :Git add .<CR>
+
+" Gitv
+nnoremap <Leader>gv :Gitv<CR>
+nnoremap <Leader>gf :Gitv!<CR>
+
+
 " NERDTree
 " Open NERDTree automatically
 " autocmd vimenter * if !argc() | NERDTree | endif
