@@ -1,8 +1,17 @@
 git config --global core.autocrlf input
 
-# Add aliases
+# Bundler aliases
 alias brake='bundle exec rake'
 alias be='bundle exec'
+
+# Git helper
+g() {
+ if [[ $# == '0' ]]; then
+   git status
+ else
+   git "$@"
+ fi
+}
 
 # Set the default editor
 export BUNDLER_EDITOR=mvim

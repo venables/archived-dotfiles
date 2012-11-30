@@ -1,0 +1,28 @@
+[core]
+  autocrlf = input
+  editor = mvim -f
+  quotepath = false
+  excludesfile = ~/.gitignore
+[user]
+  name = Matt Venables
+  email = mattvenables@gmail.com
+[color]
+  ui = true
+[alias]
+  a = add
+  c = commit
+  ca = commit -a
+  co = checkout
+  d = diff
+  fap = fetch --all -p
+  l = log --graph --decorate --pretty=oneline --abbrev-commit
+  la = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ll = !git --no-pager l
+  lla = !git --no-pager la
+  p = push
+  pr = pull --rebase
+  pom = push origin master
+  s = status
+  ru = remote update
+  ro = rebase origin/master
+  r = rebase
