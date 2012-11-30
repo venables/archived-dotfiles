@@ -54,4 +54,4 @@
 	url = git://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/vim-vroom"]
 	path = vim/bundle/vim-vroom
-	url = git://github.com/skalnik/vim-vroom.git
+	url = git@github.com:mattv/vim-vroom.git
