@@ -5,7 +5,7 @@ filetype plugin indent on
 
 "
 " Colorscheme
-colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow-Night-Bright
 
 "
 " GUI Options
