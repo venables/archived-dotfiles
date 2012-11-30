@@ -13,6 +13,11 @@ g() {
  fi
 }
 
+# Ruby 1.9.3 + Rails improvements
+# https://gist.github.com/1688857
+export RUBY_GC_MALLOC_LIMIT=60000000
+export RUBY_FREE_MIN=200000
+
 # Set the default editor
 export BUNDLER_EDITOR=mvim
 export EDITOR='mvim -f'
