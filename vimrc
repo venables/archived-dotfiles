@@ -88,6 +88,8 @@ nnoremap <Leader>sv :source ~/.vimrc<CR>
 " <Leader>ev Edit vimrc file
 nnoremap <Leader>ev :e ~/.vimrc<CR>
 
+" Map <Leader>\ to cycle through open frames
+nnoremap <Leader>\ <c-w>w
 
 
 "
@@ -129,8 +131,6 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" Map <Leader>\ to cycle through open frames
-nnoremap <Leader>\ <c-w>w
 
 "
 " MacVim specifics
