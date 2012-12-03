@@ -5,12 +5,12 @@ filetype plugin indent on
 
 "
 " Colorscheme
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Bright
 
 "
 " GUI Options
 set colorcolumn=120
-set gfn=Menlo\ Regular:h12
+set gfn=Menlo\ Regular:h14
 syntax on
 
 " Don't save backups
@@ -118,7 +118,6 @@ nnoremap <Leader>ga :Git add .<CR>
 " Gitv
 nnoremap <Leader>gv :Gitv<CR>
 nnoremap <Leader>gf :Gitv!<CR>
-
 
 " NERDTree
 " Open NERDTree automatically
