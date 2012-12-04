@@ -13,6 +13,9 @@ set colorcolumn=120
 set gfn=Menlo\ Regular:h14
 syntax on
 
+" Fullscreen by default
+set fu
+
 " Don't save backups
 set nobackup
 set nowritebackup
