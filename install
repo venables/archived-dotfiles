@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+BASE_DIR=`pwd`
+cd ~
+
+ln -sf $BASE_DIR/vimrc .vimrc
+ln -sf $BASE_DIR/zshrc .zshrc
+ln -sf $BASE_DIR/vim .vim
+ln -sf $BASE_DIR/ackrc .ackrc
+ln -sf $BASE_DIR/gitconfig .gitconfig
+ln -sf $BASE_DIR/powconfig .powconfig
+ln -sf $BASE_DIR/irbrc .irbrc
+
+cd $BASE_DIR
+git submodule init
+git submodule update
