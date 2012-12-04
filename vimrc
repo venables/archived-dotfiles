@@ -14,7 +14,7 @@ set gfn=Menlo\ Regular:h14
 syntax on
 
 " Fullscreen by default
-set fu
+" set fu
 
 " Don't save backups
 set nobackup
