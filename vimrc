@@ -91,6 +91,16 @@ nnoremap <Leader>ev :e ~/.vimrc<CR>
 " Map <Leader>\ to cycle through open frames
 nnoremap <Leader>\ <c-w>w
 
+" Disable arrow keys
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" Fullscreen
+nnoremap <Leader>f :set invfu<CR>
+
+
 
 "
 " Plugin Customizations
@@ -100,22 +110,14 @@ nnoremap <Leader>\ <c-w>w
 " <D-F> (Command Shift F) - :Ack
 nnoremap <D-F> :Ack 
 
-" Fugitive
-" <leader>gb maps to :Gblame<CR>
+" Fugitive + Git + Gitv
 nnoremap <Leader>gb :Gblame<CR>
-" <leader>gs maps to :Gstatus<CR>
+nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
-" <leader>gd maps to :Gdiff<CR>
 nnoremap <Leader>gl :Glog<CR>
-" <leader>gl maps to :Glog<CR>
 nnoremap <Leader>gc :Gcommit<CR>
-" <leader>gc maps to :Gcommit<CR>
 nnoremap <Leader>gp :Git push<CR>
-" <leader>gp maps to :Git push<CR>
-
 nnoremap <Leader>ga :Git add .<CR>
-
-" Gitv
 nnoremap <Leader>gv :Gitv<CR>
 nnoremap <Leader>gf :Gitv!<CR>
 
@@ -126,16 +128,6 @@ nnoremap <Leader>gf :Gitv!<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Map <Leader>n to toggle nerd tree
 nnoremap <Leader>n :NERDTreeToggle<CR>
-
-
-
-"""""""""""""""""""""""
-
-" Disable arrow keys
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
 
 
 "
