@@ -86,6 +86,8 @@ au BufRead,BufNewFile {Procfile} set ft=ruby
 " <Leader>w Remove all trailing whitespace in file
 nnoremap <Leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
+
 " <Leader>sv Source vimrc file
 nnoremap <Leader>sv :source ~/.vimrc<CR>
 " <Leader>ev Edit vimrc file
@@ -111,7 +113,7 @@ nnoremap <Leader>f :set invfu<CR>
 
 " Ack.vim
 " <D-F> (Command Shift F) - :Ack
-nnoremap <D-F> :Ack 
+nnoremap <D-F> :Ack<Space>
 
 " Fugitive + Git + Gitv
 nnoremap <Leader>gb :Gblame<CR>
