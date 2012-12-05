@@ -1,6 +1,6 @@
 [core]
 	autocrlf = input
-	editor = mvim -f
+	editor = vim
 	quotepath = false
 	excludesfile = ~/.gitignore
 [user]
