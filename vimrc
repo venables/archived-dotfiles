@@ -9,7 +9,7 @@ colorscheme Tomorrow-Night-Bright
 
 "
 " GUI Options
-set colorcolumn=120
+set colorcolumn=80
 set gfn=Menlo\ Regular:h14
 syntax on
 
