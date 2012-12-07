@@ -35,6 +35,9 @@ set expandtab
 " Show line numbers
 set number
 
+" Highlight the current line number
+set cursorline
+
 " Show the ruler
 set ruler
 
