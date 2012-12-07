@@ -4,6 +4,12 @@ git config --global core.autocrlf input
 alias brake='bundle exec rake'
 alias be='bundle exec'
 
+# Git aliases
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add '
+alias gc='git commit'
+
 # Git helper
 g() {
  if [[ $# == '0' ]]; then
