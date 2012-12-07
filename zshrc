@@ -4,6 +4,10 @@ git config --global core.autocrlf input
 alias brake='bundle exec rake'
 alias be='bundle exec'
 
+# ls aliases
+alias ll='ls -l'
+alias la='ls -la'
+
 # Git aliases
 alias gs='git status'
 alias gd='git diff'
