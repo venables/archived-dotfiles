@@ -11,7 +11,9 @@ alias la='ls -la'
 # Git aliases
 alias gs='git status'
 alias gd='git diff'
+alias gdc='git diff --cached'
 alias ga='git add '
+alias gap='git add -p'
 alias gc='git commit'
 
 # Git helper
