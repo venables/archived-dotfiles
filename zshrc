@@ -15,6 +15,7 @@ alias gdc='git diff --cached'
 alias ga='git add '
 alias gap='git add -p'
 alias gc='git commit'
+alias gcm='git commit -m '
 alias gl='git l'
 alias gla='git la'
 
