@@ -9,15 +9,18 @@ alias ll='ls -l'
 alias la='ls -la'
 
 # Git aliases
-alias gs='git status'
-alias gd='git diff'
-alias gdc='git diff --cached'
 alias ga='git add '
 alias gap='git add -p'
+alias gb='git branch'
 alias gc='git commit'
 alias gcm='git commit -m '
+alias gd='git diff'
+alias gdc='git diff --cached'
 alias gl='git l'
 alias gla='git la'
+alias gpush='git push'
+alias gs='git status'
+alias gshow='git show'
 
 # Git helper
 g() {
