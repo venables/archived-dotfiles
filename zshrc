@@ -8,6 +8,9 @@ alias be='bundle exec'
 alias ll='ls -l'
 alias la='ls -la'
 
+# vim aliases
+alias m='mvim -c "au VimLeave * !open -a Terminal"'
+
 # Git aliases
 alias ga='git add '
 alias gap='git add -p'
