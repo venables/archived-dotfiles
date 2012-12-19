@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BASE_DIR=`pwd`
+BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd ~
 
 ln -sf $BASE_DIR/vimrc .vimrc
@@ -10,6 +10,7 @@ ln -sf $BASE_DIR/ackrc .ackrc
 ln -sf $BASE_DIR/gitconfig .gitconfig
 ln -sf $BASE_DIR/powconfig .powconfig
 ln -sf $BASE_DIR/irbrc .irbrc
+ln -sf $BASE_DIR/gemrc .gemrc
 
 cd $BASE_DIR
 git submodule init
