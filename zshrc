@@ -19,16 +19,17 @@ alias gc='git commit'
 alias gcm='git commit -m '
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gdw='git diff --word-diff'
 alias gl='git l'
 alias gla='git la'
 alias gpush='git push'
-alias gs='git status'
+alias gs='git status -sb'
 alias gshow='git show'
 
 # Git helper
 g() {
  if [[ $# == '0' ]]; then
-   git status
+   git status -sb
  else
    git "$@"
  fi
