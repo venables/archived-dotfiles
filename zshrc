@@ -8,6 +8,13 @@ alias be='bundle exec'
 alias ll='ls -l'
 alias la='ls -la'
 
+# vim syntax highlight in less
+VLESS=$(find /usr/share/vim -name 'less.sh')
+if [ ! -z $VLESS ]; then
+  alias less=$VLESS
+fi
+alias l='less'
+
 # vim aliases
 alias m='mvim -c "au VimLeave * !open -a Terminal"'
 
