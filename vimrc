@@ -63,6 +63,11 @@ set showcmd
 " Disable word wrap
 set nowrap
 
+" Speed things up
+set notimeout
+set ttimeout
+set timeoutlen=50
+
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
