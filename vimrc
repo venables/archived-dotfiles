@@ -13,9 +13,6 @@ set colorcolumn=80
 set gfn=Menlo\ Regular:h14
 syntax on
 
-" Fullscreen by default
-" set fu
-
 " Don't save backups
 set nobackup
 set nowritebackup
@@ -144,6 +141,9 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 if has("gui_running")
   " Set window transparency
   " set transparency=5
+
+  " Fullscreen by default
+  " set fu
 
   " Use minimal window options
   set guioptions=aAce

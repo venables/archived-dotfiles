@@ -16,7 +16,8 @@ fi
 alias l='less'
 
 # vim aliases
-alias m='mvim -c "au VimLeave * !open -a Terminal"'
+alias m='mvim -c "au VimLeave * !open -a iTerm"'
+alias v='vim'
 
 # Git aliases
 alias ga='git add '
