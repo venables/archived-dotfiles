@@ -57,6 +57,7 @@ export PATH=/usr/local/bin:$PATH
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="./bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Android SDK
