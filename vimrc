@@ -13,6 +13,9 @@ set colorcolumn=80
 set gfn=Menlo\ Regular:h14
 syntax on
 
+" Disable balloon eval
+set noballooneval
+
 " Don't save backups
 set nobackup
 set nowritebackup
