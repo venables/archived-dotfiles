@@ -14,7 +14,7 @@ set gfn=Menlo\ Regular:h14
 syntax on
 
 " Disable balloon eval
-set noballooneval
+"set noballooneval
 
 " Don't save backups
 set nobackup
