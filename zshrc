@@ -4,10 +4,6 @@ git config --global core.autocrlf input
 alias brake='bundle exec rake'
 alias be='bundle exec'
 
-# ls aliases
-alias ll='ls -l'
-alias la='ls -la'
-
 # vim syntax highlight in less
 VLESS=$(find /usr/share/vim -name 'less.sh')
 if [ ! -z $VLESS ]; then
@@ -57,14 +53,7 @@ export PATH=/usr/local/bin:$PATH
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="./bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# Android SDK
-export PATH=/Android/platform-tools:/Android/tools:$PATH
-
-# For Parallel tests:
-export PARALLEL_TEST_PROCESSORS=3
 
 # Colorize the terminal
 export CLICOLOR=1
@@ -78,12 +67,12 @@ colors
 # Allow for functions in the prompt.
 setopt PROMPT_SUBST
 
+# Set the prompt to be of the format:
+# ~/<path>@<git-branch>
 parse_git_branch() {
   branch="$(git symbolic-ref HEAD 2>/dev/null)" || return
   echo "@${branch#refs/heads/}"
 }
-
-# Set the prompt.
 PROMPT=$'%{${fg[cyan]}%}%B%~%b%{${fg[yellow]}%}$(parse_git_branch)%{${fg[default]}%} '
 
 autoload -U compinit
