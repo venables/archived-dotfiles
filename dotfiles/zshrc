@@ -1,21 +1,7 @@
+# Git
+# ===
 git config --global core.autocrlf input
 
-# Bundler aliases
-alias brake='bundle exec rake'
-alias be='bundle exec'
-
-# vim syntax highlight in less
-VLESS=$(find /usr/share/vim -name 'less.sh')
-if [ ! -z $VLESS ]; then
-  alias less=$VLESS
-fi
-alias l='less'
-
-# vim aliases
-alias m='mvim -c "au VimLeave * !open -a Terminal"'
-alias v='vim'
-
-# Git aliases
 alias ga='git add '
 alias gap='git add -p'
 alias gb='git branch'
@@ -30,30 +16,30 @@ alias gpush='git push'
 alias gs='git status -sb'
 alias gshow='git show'
 
-# Git helper
 g() {
  if [[ $# == '0' ]]; then
-   git status -sb
+   gs
  else
    git "$@"
  fi
 }
 
-# Ruby 1.9.3 + Rails improvements
-# https://gist.github.com/1688857
-export RUBY_GC_MALLOC_LIMIT=60000000
-export RUBY_FREE_MIN=200000
+# Bundler
+# =======
+alias brake='bundle exec rake'
+alias be='bundle exec'
 
-# Set the default editor
-export BUNDLER_EDITOR=mvim
+# vim
+# ===
+alias m='mvim -c "au VimLeave * !open -a Terminal"'
+alias v='vim'
+
 export EDITOR='mvim -f'
+export BUNDLER_EDITOR=mvim
 
-# Load from /usr/local/bin before /usr/bin
-export PATH=/usr/local/bin:$PATH
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# Terminal
+# ========
 
 # Colorize the terminal
 export CLICOLOR=1
@@ -80,8 +66,25 @@ compinit
 
 ulimit -n 10000
 
+# Load from /usr/local/bin before /usr/bin
+export PATH=/usr/local/bin:$PATH
+
+# Ruby
+# ====
+
+# Ruby 1.9.3 + Rails improvements (https://gist.github.com/1688857)
+export RUBY_GC_MALLOC_LIMIT=60000000
+export RUBY_FREE_MIN=200000
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# OSX Terminal
+# ============
+
 # Set Apple Terminal.app resume directory
-if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
+if [[ $TERM_PROGRAM == "Apple_Terminal" ]] {
   function chpwd {
     local SEARCH=' '
     local REPLACE='%20'

@@ -1,17 +1,60 @@
 #!/usr/bin/env bash
 
-BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cd ~
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES=$BASE_DIR/dotfiles
 
-ln -sf $BASE_DIR/vimrc .vimrc
-ln -sf $BASE_DIR/zshrc .zshrc
-ln -sf $BASE_DIR/vim .vim
-ln -sf $BASE_DIR/ackrc .ackrc
-ln -sf $BASE_DIR/gitconfig .gitconfig
-ln -sf $BASE_DIR/powconfig .powconfig
-ln -sf $BASE_DIR/irbrc .irbrc
-ln -sf $BASE_DIR/gemrc .gemrc
+for f in $DOTFILES/*
+do
+  ln -sf $f ~/.$(basename $f)
+done
 
-cd $BASE_DIR
-git submodule init
-git submodule update
+# vim Plugins
+# ===========
+
+rm -rf $DOTFILES/vim
+mkdir $DOTFILES/vim
+
+rm -rf $DOTFILES/.plugins
+mkdir -p $DOTFILES/.plugins
+cd $DOTFILES/.plugins
+
+# 'scrooloose/syntastic'
+# 'Lokaltog/vim-powerline'
+VIM_PLUGINS=(
+  'mileszs/ack.vim'
+  'gregsexton/gitv'
+  'ddollar/nerdcommenter'
+  'scrooloose/nerdtree'
+  'tpope/vim-bundler'
+  'kchmck/vim-coffee-script'
+  'tpope/vim-endwise'
+  'tpope/vim-fugitive'
+  'tpope/vim-git'
+  'tpope/vim-haml'
+  'tpope/vim-markdown'
+  'tpope/vim-pathogen'
+  'tpope/vim-rails'
+  'tpope/vim-rake'
+  'tpope/vim-repeat'
+  'vim-ruby/vim-ruby'
+  'tpope/vim-surround'
+  'venables/vim-vroom'
+  'pangloss/vim-javascript'
+  'briancollins/vim-jst'
+)
+for repo in "${VIM_PLUGINS[@]}"
+do
+  git clone git://github.com/$repo.git $DOTFILES/.plugins/$(basename "$repo")
+done
+
+ln -s $DOTFILES/.plugins $DOTFILES/vim/bundle
+
+
+# Themes
+# ======
+
+# Install Tomorrow-Theme
+rm -rf $DOTFILES/.themes
+mkdir -p $DOTFILES/.themes
+git clone git://github.com/chriskempson/tomorrow-theme.git $DOTFILES/.themes/tomorrow-theme
+ln -s $DOTFILES/.themes/tomorrow-theme/vim/colors $DOTFILES/vim/

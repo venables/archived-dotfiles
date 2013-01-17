@@ -5,7 +5,7 @@ Installation:
 =============
 
 ```bash
-  git clone git://github.com/mattv/dotfiles.git
+  git clone git://github.com/venables/dotfiles.git
   cd dotfiles
   ./install
 ```
