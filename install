@@ -19,7 +19,6 @@ mkdir -p $DOTFILES/.plugins
 cd $DOTFILES/.plugins
 
 # 'scrooloose/syntastic'
-# 'Lokaltog/vim-powerline'
 VIM_PLUGINS=(
   'mileszs/ack.vim'
   'gregsexton/gitv'
@@ -41,6 +40,7 @@ VIM_PLUGINS=(
   'venables/vim-vroom'
   'pangloss/vim-javascript'
   'briancollins/vim-jst'
+  'Lokaltog/vim-powerline'
 )
 for repo in "${VIM_PLUGINS[@]}"
 do
