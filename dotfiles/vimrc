@@ -16,6 +16,9 @@ syntax on
 " Map ':W' to ':w'
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 
+" Disable audible bell
+set visualbell
+
 " Don't save backups
 set nobackup
 set nowritebackup
