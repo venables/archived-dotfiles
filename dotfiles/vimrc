@@ -105,6 +105,11 @@ command! FixWindows :%s/\r/\r/g
 " <Leader>w Remove all trailing whitespace in file
 nnoremap <Leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
+" <Leader>W Remove all leading whitespace in a file
+nnoremap <Leader>W :%s/^ *//g<Bar>:nohl<CR>
+
+" <Leader>b List all active buffers.
+" Example: "<Leader>b3<CR>" Open buffer 3
 nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
 " <Leader>sv Source vimrc file
