@@ -88,7 +88,15 @@ set backspace=indent,eol,start
 "
 au BufRead,BufNewFile {Procfile} set ft=ruby
 
+"
+" Custom Commands
+"
 
+" Strip html tags, leaving erb tags
+command! StripTags :%s/<[^<%][^>]*>//g
+
+" Convert Windows linebreaks to unix linebreaks
+command! FixWindows :%s/\r/\r/g
 
 "
 " Mappings
