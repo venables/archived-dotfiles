@@ -18,7 +18,8 @@ rm -rf $DOTFILES/.plugins
 mkdir -p $DOTFILES/.plugins
 cd $DOTFILES/.plugins
 
-# 'scrooloose/syntastic'
+# Disabled Plugins:
+#   'Valloric/YouCompleteMe'
 VIM_PLUGINS=(
   'mileszs/ack.vim'
   'gregsexton/gitv'
@@ -40,6 +41,7 @@ VIM_PLUGINS=(
   'venables/vim-vroom'
   'pangloss/vim-javascript'
   'briancollins/vim-jst'
+  'scrooloose/syntastic'
 )
 for repo in "${VIM_PLUGINS[@]}"
 do

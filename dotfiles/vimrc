@@ -130,10 +130,14 @@ nnoremap <Down> :echoe "Use j"<CR>
 nnoremap <Leader>f :set invfu<CR>
 
 
-
 "
 " Plugin Customizations
 "
+
+" Syntastic
+"let g:syntastic_enable_signs = 0
+let g:syntastic_enable_balloons = 0
+let g:syntastic_enable_highlighting = 0
 
 " Ack.vim
 " <D-F> (Command Shift F) - :Ack
