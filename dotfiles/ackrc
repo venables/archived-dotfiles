@@ -1,11 +1,12 @@
 --type-add=ruby=.haml
 --type-add=ruby=.jbuilder
+--type-add=ruby=.rake
+--type-add=ruby=.feature
+--type-add=ruby=Gemfile
 --type-add=css=.scss
 --type-add=css=.sass
 --type-add=css=.less
 --type-add=objc=.pch
---type-add=ruby=.feature
---type-add=ruby=Gemfile
 --type-set=coffeescript=.coffee
 --type-set=xcode=.pbxproj,.pbxuser,.perspectivev3
 --type-set=ragel=.rl
@@ -20,3 +21,4 @@
 --noxcode
 --ignore-dir=coverage
 --ignore-dir=i18n
+--ignore-dir=tmp
