@@ -24,6 +24,10 @@ g() {
  fi
 }
 
+# Postgresql
+# ==========
+alias pgusers='psql template1 -c "\du"'
+
 # Bundler
 # =======
 alias brake='bundle exec rake'
