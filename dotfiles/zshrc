@@ -30,8 +30,8 @@ alias pgusers='psql template1 -c "\du"'
 
 # Bundler
 # =======
-alias brake='bundle exec rake'
-alias be='bundle exec'
+alias be='echo "WARNING: Use binstubs instead of bundle exec"; bundle exec'
+alias brake='be rake'
 
 # vim
 # ===
@@ -82,6 +82,9 @@ export RUBY_FREE_MIN=200000
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
+
+# Binstubs
+export PATH="./bin:$PATH"
 
 # OSX Terminal
 # ============
