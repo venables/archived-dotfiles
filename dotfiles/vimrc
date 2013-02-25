@@ -167,6 +167,9 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 " MacVim specifics
 "
 if has("gui_running")
+  " Fix the window size
+  set lines=50 columns=90
+
   " Set window transparency
   " set transparency=5
 
@@ -178,5 +181,6 @@ if has("gui_running")
 
   " Automatically resize splits when resizing MacVim window
   autocmd VimResized * wincmd =
+
 endif
 
