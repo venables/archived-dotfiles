@@ -8,6 +8,10 @@ do
   ln -sf $f ~/.$(basename $f)
 done
 
+# bin files
+# =========
+ln -s $BASE_DIR/bin/* /usr/local/bin/
+
 # vim Plugins
 # ===========
 

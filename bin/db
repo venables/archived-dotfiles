@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+
+# Start a database
+#
+# Examples
+#
+#   # postgresql:
+#   $ db pg
+#
+#   # mongodb:
+#   $ db mongo
+#
+#   # mysql
+#   $ db mysql
+#
+#   # redis
+#   $ db redis
+
+begin
+  case ARGV[0].to_s.downcase
+  when 'pg', 'postgres', 'postgresql'
+    `pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start`
+  when 'mongo', 'mongodb'
+    `mongod run --config /usr/local/etc/mongod.conf --logpath /usr/local/var/log/mongodb/mongo.log &`
+  when 'mysql'
+    `mysql.server start`
+  when 'redis'
+    `redis-server /usr/local/etc/redis.conf --daemonize yes`
+  else
+    raise "Unknown database `#{ARGV[0]}`."
+  end
+
+  puts "Done."
+rescue => e
+  puts e.message
+end
