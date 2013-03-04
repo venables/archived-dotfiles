@@ -168,7 +168,7 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 "
 if has("gui_running")
   " Fix the window size
-  set lines=50 columns=90
+  set lines=50 columns=120
 
   " Set window transparency
   " set transparency=5
