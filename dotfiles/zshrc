@@ -28,7 +28,7 @@ alias brake='be rake'
 
 # vim
 # ===
-alias m='mvim -c "au VimLeave * !open -a Terminal"'
+alias m='mvim' #-c "au VimLeave * !open -a Terminal"'
 alias v='vim'
 
 export EDITOR='mvim -f'
