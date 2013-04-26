@@ -2,6 +2,7 @@
 # ===
 git config --global core.autocrlf input
 
+alias g='git'
 alias ga='git add '
 alias gap='git add -p'
 alias gb='git branch'
@@ -15,14 +16,6 @@ alias gla='git la'
 alias gpush='git push'
 alias gs='git status -sb'
 alias gshow='git show'
-
-g() {
- if [[ $# == '0' ]]; then
-   gs
- else
-   git "$@"
- fi
-}
 
 # Postgresql
 # ==========
