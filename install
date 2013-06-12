@@ -56,7 +56,6 @@ git clone -b develop git://github.com/Lokaltog/vim-powerline.git $DOTFILES/.plug
 
 ln -s $DOTFILES/.plugins $DOTFILES/vim/bundle
 
-
 # Themes
 # ======
 

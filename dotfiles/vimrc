@@ -139,6 +139,18 @@ nnoremap <Leader>f :set invfu<CR>
 let g:syntastic_enable_balloons = 0
 let g:syntastic_enable_highlighting = 0
 
+" rails.vim
+" Projection from http://robots.thoughtbot.com/post/50107717967/extending-rails-vim-with-custom-commands
+let g:rails_projections = {
+  \ "app/serializers/*_serializer.rb": {
+    \ "command": "serializer",
+    \ "affinity": "model",
+    \ "test": "spec/serializers/%s_spec.rb",
+    \ "related": "app/models/%s.rb",
+    \ "template": "class %SSerializer < ActiveModel::Serializer\nend"
+  \ }
+\ }
+
 " Ack.vim
 " <D-F> (Command Shift F) - :Ack
 nnoremap <D-F> :Ack<Space>
