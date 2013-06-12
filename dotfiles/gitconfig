@@ -28,3 +28,5 @@
 	ru = remote update
 	ro = rebase origin/master
 	r = rebase
+[init]
+	templatedir = ~/.git-templates
