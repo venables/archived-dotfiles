@@ -118,7 +118,7 @@ nnoremap <Leader>sv :source ~/.vimrc<CR>
 nnoremap <Leader>ev :e ~/.vimrc<CR>
 
 " Map <Leader>\ to cycle through open frames
-nnoremap <Leader>\ <c-w>w
+"nnoremap <Leader>\ <c-w>w
 
 " Disable arrow keys
 nnoremap <Left> :echoe "Use h"<CR>
