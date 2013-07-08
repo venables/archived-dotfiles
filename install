@@ -43,16 +43,15 @@ VIM_PLUGINS=(
   'venables/vim-vroom'
   'pangloss/vim-javascript'
   'briancollins/vim-jst'
+  'othree/html5.vim'
+  'bling/vim-airline'
+  'bling/vim-bufferline'
 )
-#'Valloric/YouCompleteMe'
-#'scrooloose/syntastic' -- too slow for sass
+
 for repo in "${VIM_PLUGINS[@]}"
 do
   git clone git://github.com/$repo.git $DOTFILES/.plugins/$(basename "$repo")
 done
-
-# vim-powerline
-git clone -b develop git://github.com/Lokaltog/vim-powerline.git $DOTFILES/.plugins/vim-powerline
 
 ln -s $DOTFILES/.plugins $DOTFILES/vim/bundle
 
