@@ -4,6 +4,15 @@
 git log -1 --format=format:%h | pbcopy
 
 # Take a photo
-PHOTODIR=~/.git-photos
-mkdir -p $PHOTODIR
-nohup imagesnap -q -w 3 $PHOTODIR/$(date +%s).jpg &>/dev/null &
+function take_and_upload_photo {
+  PHOTODIR=~/.git-photos
+  FILENAME=$PHOTODIR/$(date +%s).jpg
+  mkdir -p $PHOTODIR
+  imagesnap -q -w 3 $FILENAME
+
+  SHA=$(git log -1 --format=format:%h)
+  APIKEY=$(cat $/.dotfiles/dotfiles/.git-photos-api-key)
+  curl -i -F access_token=$APIKEY -F sha=$SHA -F photo=@$FILENAME https://git-photos-dev.herokuapp.com/api/uploads
+}
+
+take_and_upload_photo >& /dev/null &
