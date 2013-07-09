@@ -30,3 +30,5 @@
 	r = rebase
 [init]
 	templatedir = ~/.git-templates
+[merge]
+	conflictstyle = diff3
