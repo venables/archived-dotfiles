@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Copy last commit hash to clipboard on commit
+git log -1 --format=format:%h | pbcopy
+
+# Take a photo
+function take_and_upload_photo {
+  PHOTODIR=~/.git-photos
+  FILENAME=$PHOTODIR/$(date +%s).jpg
+  mkdir -p $PHOTODIR
+  imagesnap -q -w 1 $FILENAME
+
+  SHA=$(git log -1 --format=format:%h)
+  ORIGIN_URL=$(git config --get remote.origin.url)
+  APIKEY=$(cat ~/.gitpic-api-key)
+  curl -L -i -F access_token=$APIKEY -F sha=$SHA -F origin=$ORIGIN_URL -F photo=@$FILENAME http://www.gitpic.io/api/uploads
+}
+
+take_and_upload_photo >& /dev/null &
