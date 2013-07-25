@@ -1,65 +1,30 @@
 #!/usr/bin/env bash
 
-BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DOTFILES=$BASE_DIR/dotfiles
-
-for f in $DOTFILES/*
-do
-  ln -sf $f ~/.$(basename $f)
-done
-
 # bin files
 # =========
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ln -s $BASE_DIR/bin/* /usr/local/bin/
 
-# vim Plugins
-# ===========
+# Make ~/.git-templates
+mkdir -p ~/.git-templates/
+cp -R ./dotfiles/git-templates/ ~/.git-templates/
 
-rm -rf $DOTFILES/vim
-mkdir $DOTFILES/vim
-
-rm -rf $DOTFILES/.plugins
-mkdir -p $DOTFILES/.plugins
-cd $DOTFILES/.plugins
-
-VIM_PLUGINS=(
-  'mileszs/ack.vim'
-  'gregsexton/gitv'
-  'ddollar/nerdcommenter'
-  'scrooloose/nerdtree'
-  'tpope/vim-bundler'
-  'kchmck/vim-coffee-script'
-  'tpope/vim-endwise'
-  'tpope/vim-fugitive'
-  'tpope/vim-git'
-  'tpope/vim-haml'
-  'tpope/vim-markdown'
-  'tpope/vim-pathogen'
-  'tpope/vim-rails'
-  'tpope/vim-rake'
-  'tpope/vim-repeat'
-  'vim-ruby/vim-ruby'
-  'tpope/vim-surround'
-  'venables/vim-vroom'
-  'pangloss/vim-javascript'
-  'briancollins/vim-jst'
-  'othree/html5.vim'
-  'bling/vim-airline'
-  'bling/vim-bufferline'
-)
-
-for repo in "${VIM_PLUGINS[@]}"
-do
-  git clone git://github.com/$repo.git $DOTFILES/.plugins/$(basename "$repo")
-done
-
-ln -s $DOTFILES/.plugins $DOTFILES/vim/bundle
+# Build ~/.vim directory
+rm -rf ~/.vim
+mkdir -p ~/.vim/bundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 # Themes
 # ======
 
-# Install Tomorrow-Theme
-rm -rf $DOTFILES/.themes
-mkdir -p $DOTFILES/.themes
-git clone git://github.com/chriskempson/tomorrow-theme.git $DOTFILES/.themes/tomorrow-theme
-ln -s $DOTFILES/.themes/tomorrow-theme/vim/colors $DOTFILES/vim/
+rm -rf .themes
+mkdir -p .themes
+git clone git://github.com/chriskempson/tomorrow-theme.git .themes/tomorrow-theme
+cp -R ./.themes/tomorrow-theme/vim/colors ~/.vim/
+rm -rf .themes
+
+echo ""
+echo ""
+echo "Post-install message:"
+echo "Ensure you have a http://gitpic.io API key in ~/.gitpic-api-key"
+echo "Open vim and run :BundleInstall"
