@@ -23,3 +23,4 @@
 --ignore-dir=coverage
 --ignore-dir=i18n
 --ignore-dir=tmp
+--ignore-dir=log
