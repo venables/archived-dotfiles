@@ -8,7 +8,7 @@ function take_and_upload_photo {
   PHOTODIR=~/.git-photos
   FILENAME=$PHOTODIR/$(date +%s).jpg
   mkdir -p $PHOTODIR
-  imagesnap -q -w 1 $FILENAME
+  imagesnap -q $FILENAME
 
   SHA=$(git log -1 --format=format:%h)
   ORIGIN_URL=$(git config --get remote.origin.url)
