@@ -16,4 +16,7 @@ function take_and_upload_photo {
   curl -L -i -F access_token=$APIKEY -F sha=$SHA -F origin=$ORIGIN_URL -F photo=@$FILENAME http://www.gitpic.io/api/uploads
 }
 
-take_and_upload_photo >& /dev/null &
+GITDIR=$(git rev-parse --show-toplevel)
+if [[ ! -d "$GITDIR/.git/rebase-merge" && ! -d "$GITDIR/.git/rebase-apply" ]]; then
+  take_and_upload_photo >& /dev/null &
+fi
