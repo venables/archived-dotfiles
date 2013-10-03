@@ -31,6 +31,8 @@ Bundle 'briancollins/vim-jst'
 Bundle 'othree/html5.vim'
 Bundle 'cespare/vim-bclose'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'moll/vim-node'
+Bundle 'claco/jasmine.vim'
 
 filetype plugin indent on
 
@@ -212,6 +214,11 @@ nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>ga :Git add .<CR>
 nnoremap <Leader>gv :Gitv<CR>
 nnoremap <Leader>gf :Gitv!<CR>
+
+" jasmine
+nnoremap <Leader>j :!NODE_ENV=test jasmine-node --forceexit --noColor %<CR>
+nnoremap <Leader>J :!NODE_ENV=test jasmine-node --forceexit --noColor spec<CR>
+"npm test --noColor<CR>
 
 " NERDTree
 " Open NERDTree automatically
