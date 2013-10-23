@@ -25,3 +25,4 @@
 --ignore-dir=tmp
 --ignore-dir=log
 --ignore-dir=node_modules
+--ignore-dir=junit
