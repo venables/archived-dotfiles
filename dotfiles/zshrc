@@ -78,6 +78,15 @@ if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 # Binstubs
 export PATH="./bin:$PATH"
 
+# C Flags
+# =======
+export CFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
+
+# Java
+# ====
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
 # OSX Terminal
 # ============
 
