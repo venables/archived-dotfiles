@@ -57,6 +57,8 @@ syntax on
 
 " Map ':W' to ':w'
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+" Map ':Wq' to ':wq'
+cnoreabbrev <expr> Wq ((getcmdtype() is# ':' && getcmdline() is# 'Wq')?('wq'):('Wq'))
 
 " Disable audible bell
 set visualbell
