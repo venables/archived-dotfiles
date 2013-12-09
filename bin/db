@@ -26,6 +26,8 @@ begin
     `mysql.server start`
   when 'redis'
     `redis-server /usr/local/etc/redis.conf --daemonize yes`
+  when 'cassandra', 'cass', 'c'
+    `cassandra`
   else
     raise "Unknown database `#{ARGV[0]}`."
   end
