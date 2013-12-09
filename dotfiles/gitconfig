@@ -1,6 +1,6 @@
 [core]
 	autocrlf = input
-	editor = vim
+	editor = mvim -f --nomru -c \"au VimLeave * !open -a Terminal\"
 	quotepath = false
 	excludesfile = ~/.gitignore
 [user]

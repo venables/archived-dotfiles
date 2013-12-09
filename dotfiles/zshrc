@@ -1,7 +1,5 @@
 # Git
 # ===
-git config --global core.autocrlf input
-
 alias g='git'
 alias ga='git add '
 alias gap='git add -p'
