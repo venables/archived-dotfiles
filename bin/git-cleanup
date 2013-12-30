@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-branch_name=`git symbolic-ref --short -q HEAD`
+branch_name=master
 
 if [ -n "$branch_name" ]; then
   # This has to be run from master
