@@ -212,8 +212,8 @@ nnoremap <Leader>gv :Gitv<CR>
 nnoremap <Leader>gf :Gitv!<CR>
 
 " jasmine
-nnoremap <Leader>j :!NODE_ENV=test jasmine-node --forceexit --noColor %<CR>
-nnoremap <Leader>J :!NODE_ENV=test jasmine-node --forceexit --noColor spec<CR>
+nnoremap <Leader>j :!NODE_ENV=test jasmine-node --coffee --forceexit --noColor --captureExceptions %<CR>
+nnoremap <Leader>J :!NODE_ENV=test jasmine-node --coffee --forceexit --noColor --captureExceptions test/unit<CR>
 "npm test --noColor<CR>
 
 " NERDTree
