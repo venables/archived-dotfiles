@@ -211,6 +211,9 @@ nnoremap <Leader>ga :Git add .<CR>
 nnoremap <Leader>gv :Gitv<CR>
 nnoremap <Leader>gf :Gitv!<CR>
 
+" Always jump to the first line when opening a git commit message
+au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
+
 " jasmine
 nnoremap <Leader>j :!NODE_ENV=test jasmine-node --coffee --forceexit --noColor --captureExceptions %<CR>
 nnoremap <Leader>J :!NODE_ENV=test jasmine-node --coffee --forceexit --noColor --captureExceptions test/unit<CR>
