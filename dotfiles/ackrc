@@ -24,5 +24,5 @@
 --ignore-dir=i18n
 --ignore-dir=tmp
 --ignore-dir=log
---ignore-dir=node_modules
 --ignore-dir=junit
+--ignore-file=is:newrelic_agent.log
