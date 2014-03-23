@@ -1,3 +1,10 @@
+# Ensure we have sbin in our path
+export PATH=/usr/sbin:$PATH
+
+# Load from /usr/local/bin before /usr/bin
+export PATH=/usr/local/bin:$PATH
+
+
 # Git
 # ===
 alias g='git'
@@ -31,6 +38,11 @@ alias v='vim'
 
 export EDITOR='mvim -f'
 export BUNDLER_EDITOR=mvim
+
+# node
+# ====
+source $(brew --prefix nvm)/nvm.sh
+alias node='env NODE_NO_READLINE=1 rlwrap node'
 
 # Foreman
 # =======
@@ -66,8 +78,6 @@ compinit
 
 ulimit -n 10000
 
-# Load from /usr/local/bin before /usr/bin
-export PATH=/usr/local/bin:$PATH
 
 # Ruby
 # ====
