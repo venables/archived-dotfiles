@@ -1,8 +1,5 @@
-# Ensure we have sbin in our path
-export PATH=/usr/sbin:$PATH
-
-# Load from /usr/local/bin before /usr/bin
-export PATH=/usr/local/bin:$PATH
+# Load from /usr/local/bin first
+export PATH=/usr/local/bin:/usr/sbin:$PATH
 
 
 # Git
@@ -43,6 +40,7 @@ export BUNDLER_EDITOR=mvim
 # ====
 source $(brew --prefix nvm)/nvm.sh
 alias node='env NODE_NO_READLINE=1 rlwrap node'
+export PATH="./node_modules/.bin:$PATH"
 
 # Foreman
 # =======
