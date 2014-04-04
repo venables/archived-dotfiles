@@ -16,6 +16,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/syntastic'
+Bundle 'ervandew/supertab'
+Bundle 'kien/ctrlp.vim'
 
 " Search plugins
 Bundle 'rking/ag.vim'
