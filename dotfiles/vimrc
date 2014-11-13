@@ -21,16 +21,18 @@ Bundle 'kien/ctrlp.vim'
 
 " Search plugins
 Bundle 'rking/ag.vim'
-"Bundle 'mileszs/ack.vim'
 
 " Git Plugins
 Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 
+" Swift/ObjC Plugins
+Bundle 'toyamarinyon/vim-swift'
+Bundle 'msanders/cocoa.vim'
+
 " Javascript Plugins
 Bundle 'jelera/vim-javascript-syntax'
-"Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'briancollins/vim-jst'
 Bundle 'claco/jasmine.vim'
 Bundle 'elzr/vim-json'

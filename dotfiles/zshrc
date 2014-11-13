@@ -1,6 +1,9 @@
 # Load from /usr/local/bin first
 export PATH=/usr/local/bin:/usr/sbin:$PATH
 
+# z
+# =
+. `brew --prefix`/etc/profile.d/z.sh
 
 # Git
 # ===
@@ -18,6 +21,8 @@ alias gla='git la'
 alias gpush='git push'
 alias gs='git status -sb'
 alias gshow='git show'
+
+alias git='hub'
 
 # Postgresql
 # ==========
@@ -39,7 +44,6 @@ export BUNDLER_EDITOR=mvim
 # node
 # ====
 source $(brew --prefix nvm)/nvm.sh
-alias node='env NODE_NO_READLINE=1 rlwrap node'
 export PATH="./node_modules/.bin:$PATH"
 
 # Foreman
@@ -109,3 +113,7 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] {
 
   chpwd
 }
+
+# zsh Syntax Highlighting
+# =======================
+source ~/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

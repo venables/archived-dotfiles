@@ -25,6 +25,8 @@
 	pr = pull --rebase
 	pom = push origin master
 	s = status
+	su = submodule update
+	si = submodule update --init
 	ru = remote update
 	ro = rebase origin/master
 	r = rebase

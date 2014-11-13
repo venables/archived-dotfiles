@@ -6,7 +6,7 @@
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_DIR=$BASE_DIR/dotfiles
-for f in agignore gemrc gitconfig gitignore irbrc pryrc vimrc zshrc
+for f in agignore gemrc gitconfig gitignore irbrc pryrc vimrc zshrc zsh-plugins
 do
   ln -sf $DOTFILES_DIR/$f ~/.$f
 done
@@ -27,6 +27,4 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 echo ""
 echo ""
-echo "Post-install message:"
-echo "Ensure you have a http://gitpic.io API key in ~/.gitpic-api-key"
 echo "Open vim and run :BundleInstall"
