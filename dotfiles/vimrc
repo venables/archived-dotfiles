@@ -28,7 +28,7 @@ Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 
 " Swift/ObjC Plugins
-Bundle 'toyamarinyon/vim-swift'
+Bundle 'Keithbsmiley/swift.vim'
 Bundle 'msanders/cocoa.vim'
 
 " Javascript Plugins
