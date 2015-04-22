@@ -56,6 +56,9 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-haml'
 
+" Go Plugins
+Bundle 'fatih/vim-go'
+
 " Theme
 Bundle 'chriskempson/base16-vim'
 

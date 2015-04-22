@@ -46,6 +46,10 @@ export BUNDLER_EDITOR=mvim
 source $(brew --prefix nvm)/nvm.sh
 export PATH="./node_modules/.bin:$PATH"
 
+# Go
+# ==
+export GOPATH=~/.go
+
 # Foreman
 # =======
 
