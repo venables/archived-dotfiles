@@ -171,6 +171,7 @@ set backspace=indent,eol,start
 " File types
 "
 au BufRead,BufNewFile {Procfile} set ft=ruby
+au BufRead,BufNewFile *.jbuilder set filetype=ruby
 au BufRead,BufNewFile *.json set filetype=json
 au BufRead,BufNewFile *.cql set filetype=sql
 
