@@ -2,3 +2,4 @@ node_modules
 test/coverage
 test/junit
 bower_components
+*.log
