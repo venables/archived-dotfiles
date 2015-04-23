@@ -27,6 +27,7 @@ alias git='hub'
 # Postgresql
 # ==========
 alias pgusers='psql template1 -c "\du"'
+alias schema='pg_dump -s'
 
 # Bundler
 # =======
