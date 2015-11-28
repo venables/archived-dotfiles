@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 
 " Editor Plugins
 Bundle 'scrooloose/nerdtree'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'ddollar/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
@@ -18,7 +19,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " https://coderwall.com/p/yiot4q/setup-vim-powerline-and-iterm2-on-mac-os-x
 
 
@@ -35,13 +36,12 @@ Bundle 'Keithbsmiley/swift.vim'
 Bundle 'msanders/cocoa.vim'
 
 " Javascript Plugins
-Bundle 'othree/yajs.vim'
 "Bundle 'jelera/vim-javascript-syntax'
-Bundle 'briancollins/vim-jst'
+"Bundle 'briancollins/vim-jst'
 Bundle 'claco/jasmine.vim'
 Bundle 'elzr/vim-json'
 Bundle 'moll/vim-node'
-Bundle 'kchmck/vim-coffee-script'
+Bundle 'othree/yajs.vim'
 
 " HTML Plugins
 Bundle 'othree/html5.vim'
@@ -64,6 +64,7 @@ Bundle 'fatih/vim-go'
 
 " Theme
 Bundle 'chriskempson/base16-vim'
+Bundle 'gosukiwi/vim-atom-dark'
 
 
 "
@@ -71,10 +72,17 @@ Bundle 'chriskempson/base16-vim'
 
 filetype plugin indent on
 
+"
+" Working dir
+autocmd BufEnter * lcd %:p:h
+cd %:p:h
+
 " Cursor
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
+" Python
+let g:python_host_prog='/usr/local/bin/python'
 
 "
 " GUI Options
@@ -311,6 +319,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " Map <Leader>n to toggle nerd tree
 nnoremap <Leader>n :NERDTreeToggle<CR>
 
+"
+" Colorscheme
+set background=dark
+"colorscheme base16-bright
+colorscheme atom-dark-256
+
+"
+" Enable syntax highlighting
+syntax on
 
 "
 " MacVim specifics
@@ -320,15 +337,6 @@ if has("gui_running")
   if s:uname == "Darwin\n"
     set guifont=Inconsolata\ for\ Powerline:h16
   endif
-
-  "
-  " Colorscheme
-  set background=dark
-  colorscheme base16-bright
-
-  "
-  " Enable syntax highlighting
-  syntax on
 
   "
   " Fix the window size

@@ -34,16 +34,26 @@ alias schema='pg_dump -s'
 alias be='echo "WARNING: Use binstubs instead of bundle exec"; bundle exec'
 alias brake='be rake'
 
+# vscode
+# ======
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+# alias m='code .'
+
+# nvim
+# ====
+alias n='open -a Neovim .'
+
 # vim
 # ===
-alias m='mvim' #-c "au VimLeave * !open -a Terminal"'
+alias m='n'
 alias v='vim'
+export EDITOR='nvim -f'
+export BUNDLER_EDITOR=nvim
 
-export EDITOR='mvim -f'
-export BUNDLER_EDITOR=mvim
 
 # node
 # ====
+export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 export PATH="./node_modules/.bin:$PATH"
 
