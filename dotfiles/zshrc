@@ -45,10 +45,10 @@ alias n='open -a Neovim .'
 
 # vim
 # ===
-alias m='n'
+alias m='mvim'
 alias v='vim'
-export EDITOR='nvim -f'
-export BUNDLER_EDITOR=nvim
+export EDITOR='mvim -f'
+export BUNDLER_EDITOR=mvim
 
 
 # node
