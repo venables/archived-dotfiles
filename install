@@ -25,6 +25,10 @@ rm -rf ~/.vim
 mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
+mkdir -p ~/.config
+ln -s ~/.vim ~/.config/nvim
+ln -s ~/.vimrc ~/.config/nvim/init.vim
+
 echo ""
 echo ""
 echo "Open vim and run :BundleInstall"

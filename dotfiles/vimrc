@@ -19,9 +19,6 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
-" Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-" https://coderwall.com/p/yiot4q/setup-vim-powerline-and-iterm2-on-mac-os-x
-
 
 " Search plugins
 Bundle 'rking/ag.vim'
@@ -36,8 +33,6 @@ Bundle 'Keithbsmiley/swift.vim'
 Bundle 'msanders/cocoa.vim'
 
 " Javascript Plugins
-"Bundle 'jelera/vim-javascript-syntax'
-"Bundle 'briancollins/vim-jst'
 Bundle 'claco/jasmine.vim'
 Bundle 'elzr/vim-json'
 Bundle 'moll/vim-node'
@@ -74,7 +69,7 @@ filetype plugin indent on
 
 "
 " Working dir
-autocmd BufEnter * lcd %:p:h
+"autocmd BufEnter * lcd %:p:h
 cd %:p:h
 
 " Cursor
@@ -233,17 +228,6 @@ nnoremap <Leader>f :set invfu<CR>
 "
 
 "
-" Powerline
-"
-set guifont=Inconsolata\ for\ Powerline:h16
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-"set term=xterm-256color
-set termencoding=utf-8
-
-"
 " vim-json
 "
 let g:vim_json_syntax_conceal = 0
@@ -333,17 +317,12 @@ syntax on
 " MacVim specifics
 "
 if has("gui_running")
-  let s:uname = system("uname")
-  if s:uname == "Darwin\n"
-    set guifont=Inconsolata\ for\ Powerline:h16
-  endif
-
   "
   " Fix the window size
   set lines=50 columns=160
 
   " Set window transparency
-  " set transparency=5
+  set transparency=10
 
   " Fullscreen by default
   " set fu
