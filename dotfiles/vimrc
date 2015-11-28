@@ -318,11 +318,15 @@ syntax on
 "
 if has("gui_running")
   "
+  " Font
+  set guifont=Inconsolata\ for\ Powerline:h14
+
+  "
   " Fix the window size
   set lines=50 columns=160
 
   " Set window transparency
-  set transparency=10
+  set transparency=5
 
   " Fullscreen by default
   " set fu
