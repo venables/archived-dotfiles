@@ -306,8 +306,8 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 "
 " Colorscheme
 set background=dark
-"colorscheme base16-bright
-colorscheme atom-dark-256
+colorscheme base16-tomorrow
+"colorscheme atom-dark-256
 
 "
 " Enable syntax highlighting
@@ -319,14 +319,16 @@ syntax on
 if has("gui_running")
   "
   " Font
-  set guifont=Inconsolata\ for\ Powerline:h14
+  set anti enc=utf-8
+  set guifont=Source\ Code\ Pro:h14
+  "set guifont=Inconsolata\ for\ Powerline:h14
 
   "
   " Fix the window size
   set lines=50 columns=160
 
   " Set window transparency
-  set transparency=5
+  set transparency=0
 
   " Fullscreen by default
   " set fu
