@@ -69,6 +69,10 @@ alias f='[ -e Procfile.local ] && foreman start -f Procfile.local || foreman sta
 
 # Terminal
 # ========
+#
+# Use base16shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # Colorize the terminal
 export CLICOLOR=1
@@ -78,6 +82,7 @@ export GREP_OPTIONS='--color=auto'
 # Initialize colors.
 autoload -U colors
 colors
+
 
 # Allow for functions in the prompt.
 setopt PROMPT_SUBST
