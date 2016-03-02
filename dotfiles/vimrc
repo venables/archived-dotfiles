@@ -302,6 +302,7 @@ nnoremap <Leader>J :!grunt test_spec --no-color --spec=test/ --forceexit<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Map <Leader>n to toggle nerd tree
 nnoremap <Leader>n :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 "
 " Colorscheme
