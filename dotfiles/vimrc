@@ -118,6 +118,10 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" colors
+set t_Co=256
+
+
 " Show line numbers
 set number
 
@@ -308,6 +312,7 @@ let NERDTreeShowHidden=1
 " Colorscheme
 set background=dark
 colorscheme base16-tomorrow
+let base16colorspace=256
 "colorscheme atom-dark-256
 
 "
