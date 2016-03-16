@@ -307,6 +307,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " Map <Leader>n to toggle nerd tree
 nnoremap <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.git$']
 
 "
 " Colorscheme
