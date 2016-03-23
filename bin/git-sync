@@ -1,9 +1,0 @@
-#!/bin/sh
-
-git checkout master
-
-git fetch --all --prune
-
-git pull
-
-git push origin master
