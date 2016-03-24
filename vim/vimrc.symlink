@@ -1,29 +1,113 @@
 " Vundle setup
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
+" Plugins
 call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
+Plugin 'VundleVim/Vundle.vim'               " vundle
+Plugin 'scrooloose/nerdtree'                " nerdtree
+Plugin 'scrooloose/nerdcommenter'           " nerdcommenter
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+" End Plugins
 
-
-" Vim setup
+filetype plugin indent on
 
 " Enable syntax highlighting
 syntax on
 
+" Set width guide
+set colorcolumn=100
+
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
 
+" Disable audible bell
+set visualbell
+
 " Move swapfiles to /tmp
 set directory=/tmp
+
+" Don't save backups
+set nobackup
+set nowritebackup
+
+" Use 2 spaces for tabs
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" Show line numbers
+set number
+
+" Highlight current line, but only in active buffer
+set cursorline
+augroup BgHighlight
+  autocmd!
+  autocmd WinEnter * set cul
+  autocmd WinLeave * set nocul
+augroup END
+
+" Always show status line
+set laststatus=2
+
+" Show current position in bottom bar (ruler)
+set ruler
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" Incrementally search, highlight search
+set incsearch
+set hlsearch
+
+" Search case-insensitive unless a capital is used
+set ignorecase
+set smartcase
+
+" Show incomplete commands (lines highlighted, etc)
+set showcmd
+
+" Speed things up
+set notimeout
+set ttimeout
+set timeoutlen=50
+
+" Show trailing whitespace as '.'
+set listchars=tab:▸\ ,trail:·
+set list
+
+" Set insert cursor to a vertical bar
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" Allow frequent command typos (e.g. 'W' instead of 'w')
+if has("user_commands")
+  command! -bang -nargs=? -complete=file E e<bang> <args>
+  command! -bang -nargs=? -complete=file W w<bang> <args>
+  command! -bang -nargs=? -complete=file Wq wq<bang> <args>
+  command! -bang -nargs=? -complete=file WQ wq<bang> <args>
+  command! -bang Wa wa<bang>
+  command! -bang WA wa<bang>
+  command! -bang Q q<bang>
+  command! -bang QA qa<bang>
+  command! -bang Qa qa<bang>
+endif
+
+" Key mapping
+nnoremap <Leader>sv :source ~/.vimrc<CR>        " <Leader>sv Source vimrc file
+nnoremap <Leader>ev :e ~/.vimrc<CR>             " <Leader>ev Edit vimrc file
+nnoremap <Left> :echoe "Use h"<CR>              " Disable Left key
+nnoremap <Right> :echoe "Use l"<CR>             " Disable Right key
+nnoremap <Up> :echoe "Use k"<CR>                " Disable Up key
+nnoremap <Down> :echoe "Use j"<CR>              " Disable Down key
+nnoremap <Leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR> " Remove trailing whitespace
+nnoremap <Leader>b :buffers<CR>:buffer<Space>   " Show all buffers
+
 
 " Plugin: NERDTree
  " Map <Leader>n to toggle nerd tree
