@@ -160,3 +160,15 @@ nnoremap <Leader>J :!grunt test_spec --no-color --spec=test/ --forceexit<CR>
 
 " Plugin: Fugitive
   nnoremap <Leader>gb :Gblame<CR>
+
+" GUI options
+if has("gui_running")
+  " Use minimal window options
+  set guioptions=aAce
+
+  " Automatically resize splits when resizing MacVim window
+  autocmd VimResized * wincmd =
+
+  " Map <Leader>f to fullscreen
+  nnoremap <Leader>f :set invfu<CR>
+endif
