@@ -1,4 +1,5 @@
 brew 'ag'
+brew 'bash-completion'
 brew 'elixir'
 brew 'forego'
 brew 'git'
