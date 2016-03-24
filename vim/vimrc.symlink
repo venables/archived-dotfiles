@@ -1,4 +1,37 @@
+" Vundle setup
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+" Vim setup
+
+" Enable syntax highlighting
 syntax on
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+" Move swapfiles to /tmp
+set directory=/tmp
+
+" Plugin: NERDTree
+ " Map <Leader>n to toggle nerd tree
+ nnoremap <Leader>n :NERDTreeToggle<CR>
+
+ " Show hidden files, except .git directory
+ let NERDTreeShowHidden=1
+ let NERDTreeIgnore = ['\.git$']
+
+ " Close the window if NERDTree is the only one left
+ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

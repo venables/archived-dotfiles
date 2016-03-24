@@ -23,4 +23,4 @@ parse_git_branch() {
   branch="$(git symbolic-ref HEAD 2>/dev/null)" || return
   echo "@${branch#refs/heads/}"
 }
-PROMPT=$'%{${fg[cyan]}%}%B%~%b%{${fg[yellow]}%}$(parse_git_branch)%{${fg[default]}%}> '
+PROMPT=$'%{${fg[cyan]}%}%B%~%b%{${fg[yellow]}%}$(parse_git_branch)%{${fg[default]}%}$ '
