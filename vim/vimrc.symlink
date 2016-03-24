@@ -53,6 +53,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" Disable word wrap
+set nowrap
+
 " Show line numbers
 set number
 
