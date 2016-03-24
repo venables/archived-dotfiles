@@ -7,9 +7,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Plugins
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'               " vundle
-Plugin 'scrooloose/nerdtree'                " nerdtree
-Plugin 'scrooloose/nerdcommenter'           " nerdcommenter
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'kien/ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'ervandew/supertab'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 " End Plugins
@@ -18,6 +26,10 @@ filetype plugin indent on
 
 " Enable syntax highlighting
 syntax on
+
+" Colorscheme
+set background=dark
+colorscheme base16-tomorrow
 
 " Set width guide
 set colorcolumn=100
@@ -85,6 +97,9 @@ set list
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
+" Always jump to the first line when opening a git commit message
+au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
+
 " Allow frequent command typos (e.g. 'W' instead of 'w')
 if has("user_commands")
   command! -bang -nargs=? -complete=file E e<bang> <args>
@@ -98,7 +113,7 @@ if has("user_commands")
   command! -bang Qa qa<bang>
 endif
 
-" Key mapping
+" Key mappings
 nnoremap <Leader>sv :source ~/.vimrc<CR>        " <Leader>sv Source vimrc file
 nnoremap <Leader>ev :e ~/.vimrc<CR>             " <Leader>ev Edit vimrc file
 nnoremap <Left> :echoe "Use h"<CR>              " Disable Left key
@@ -108,6 +123,9 @@ nnoremap <Down> :echoe "Use j"<CR>              " Disable Down key
 nnoremap <Leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR> " Remove trailing whitespace
 nnoremap <Leader>b :buffers<CR>:buffer<Space>   " Show all buffers
 
+" Grunt-specific test running commands
+nnoremap <Leader>j :!grunt test_spec --no-color --spec=% --forceexit<CR>
+nnoremap <Leader>J :!grunt test_spec --no-color --spec=test/ --forceexit<CR>
 
 " Plugin: NERDTree
  " Map <Leader>n to toggle nerd tree
@@ -119,3 +137,26 @@ nnoremap <Leader>b :buffers<CR>:buffer<Space>   " Show all buffers
 
  " Close the window if NERDTree is the only one left
  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Plugin: Syntastic
+  let g:syntastic_enable_signs=1
+  let g:syntastic_auto_jump=1
+  let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+  let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+
+" Plugin: ag.vim
+  " <D-F> (Command Shift F) - :Ag
+  nnoremap <D-F> :Ag<Space>
+
+" Plugin: CtrlP
+  nnoremap <D-O> :CtrlP<CR>
+  if executable('ag')
+    " Use Ag over Grep
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  endif
+
+" Plugin: Fugitive
+  nnoremap <Leader>gb :Gblame<CR>
