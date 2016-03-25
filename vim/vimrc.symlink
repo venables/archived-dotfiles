@@ -180,6 +180,7 @@ if has("gui_running")
   " Automatically resize splits when resizing MacVim window
   autocmd VimResized * wincmd =
 
-  " Map <Leader>f to fullscreen
+  " Fullscreen (<Leader>f and Command+Enter)
   nnoremap <Leader>f :set invfu<CR>
+  nnoremap <D-CR> :set invfu<CR>
 endif
