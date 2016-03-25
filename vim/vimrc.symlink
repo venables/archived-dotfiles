@@ -117,14 +117,22 @@ if has("user_commands")
 endif
 
 " Key mappings
-nnoremap <Leader>sv :source ~/.vimrc<CR>        " <Leader>sv Source vimrc file
-nnoremap <Leader>ev :e ~/.vimrc<CR>             " <Leader>ev Edit vimrc file
-nnoremap <Left> :echoe "Use h"<CR>              " Disable Left key
-nnoremap <Right> :echoe "Use l"<CR>             " Disable Right key
-nnoremap <Up> :echoe "Use k"<CR>                " Disable Up key
-nnoremap <Down> :echoe "Use j"<CR>              " Disable Down key
-nnoremap <Leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR> " Remove trailing whitespace
-nnoremap <Leader>b :buffers<CR>:buffer<Space>   " Show all buffers
+" <Leader>sv Source vimrc file
+nnoremap <Leader>sv :source ~/.vimrc<CR>
+" <Leader>ev Edit vimrc file
+nnoremap <Leader>ev :e ~/.vimrc<CR>
+" Disable Left key
+nnoremap <Left> :echoe "Use h"<CR>
+" Disable Right key
+nnoremap <Right> :echoe "Use l"<CR>
+" Disable Up key
+nnoremap <Up> :echoe "Use k"<CR>
+" Disable Down key
+nnoremap <Down> :echoe "Use j"<CR>
+" Remove trailing whitespace
+nnoremap <Leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+" Show all buffers
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
 " Grunt-specific test running commands
 nnoremap <Leader>j :!grunt test_spec --no-color --spec=% --forceexit<CR>
