@@ -14,7 +14,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'ervandew/supertab'
 Plugin 'chriskempson/base16-vim'
@@ -167,6 +167,9 @@ nnoremap <Leader>J :!grunt test_spec --no-color --spec=test/ --forceexit<CR>
 
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
   endif
 
 " Plugin: Fugitive
