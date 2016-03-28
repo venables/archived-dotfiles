@@ -144,7 +144,7 @@ nnoremap <Leader>J :!grunt test_spec --no-color --spec=test/ --forceexit<CR>
 
  " Show hidden files, except .git directory
  let NERDTreeShowHidden=1
- let NERDTreeIgnore = ['\.git$']
+ let NERDTreeIgnore = ['\.git$', '\.DS_Store']
 
  " Close the window if NERDTree is the only one left
  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
