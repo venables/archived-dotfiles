@@ -22,6 +22,7 @@ Plugin 'chriskempson/base16-vim'
 call vundle#end()
 " End Plugins
 
+" Wrap gitcommit file types at the appropriate length
 filetype plugin indent on
 
 " Enable syntax highlighting
@@ -33,9 +34,6 @@ colorscheme base16-tomorrow
 
 " Set width guide
 set colorcolumn=100
-
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
 
 " Disable audible bell
 set visualbell
@@ -102,6 +100,9 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " Always jump to the first line when opening a git commit message
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
+
+" Custom filetypes
+au BufNewFile,BufRead *.ejs set filetype=html
 
 " Allow frequent command typos (e.g. 'W' instead of 'w')
 if has("user_commands")
