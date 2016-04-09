@@ -18,6 +18,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'ervandew/supertab'
 Plugin 'chriskempson/base16-vim'
+Plugin 'othree/yajs.vim'
 
 call vundle#end()
 " End Plugins
