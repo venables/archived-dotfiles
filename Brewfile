@@ -1,7 +1,6 @@
 brew 'ag'
 brew 'bash-completion'
 brew 'elixir'
-brew 'forego'
 brew 'git'
 brew 'heroku-toolbelt'
 brew 'hub'
