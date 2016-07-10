@@ -35,7 +35,7 @@ set background=dark
 if !has("gui_running")
   let base16colorspace=256
 endif
-colorscheme base16-tomorrow
+colorscheme base16-tomorrow-night
 
 " Set width guide
 set colorcolumn=100
