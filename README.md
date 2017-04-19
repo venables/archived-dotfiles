@@ -1,3 +1,5 @@
+**NOTE:** This repository is no longer updated. I have moved to a much simpler, faster dotfile system at [venables/dotfiles](https://github.com/venables/dotfiles)
+
 # dotfiles
 
 Forked from [holman](https://github.com/holman/dotfiles). But I already had a dotfiles repo, so I manually did it instead of a github fork.
